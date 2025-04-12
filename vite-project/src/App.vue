@@ -15,7 +15,7 @@ export
       }
     },
     mounted() {
-      axios.get('http://localhost:3000/usuarios')
+      axios.get('http://localhost:3000/crearProducto')
         .then(response => {
           this.data = response.data;
         })
