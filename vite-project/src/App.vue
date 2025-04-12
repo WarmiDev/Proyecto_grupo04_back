@@ -6,10 +6,13 @@ export
     name: 'App',
     data() {
       return {
-        fields: ['nombre', 'apellido',],
+        fields: ['nombre', 'apellido','precio', 'stock', 'categoria'],
         
         nombre: "",
         apellido: "",
+        precio: "",
+        stock: "",
+        categoria: "",
         data: [],
 
       }
