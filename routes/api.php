@@ -9,8 +9,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::middleware('cors')->get('/mostrarProducto', [ProductoController::class, 'mostrarProductos']);
-Route::middleware('cors')->post('/crearProducto', [ProductoController::class, 'crearProducto']);
-Route::middleware('cors')->delete('/borrarProducto/{producto_id}', [ProductoController::class, 'borrarProducto']);
-Route::middleware('cors')->put('/editarProducto/{producto_id}', [ProductoController::class, 'editarProducto']);
-
+Route::post('/crearProducto',[ProductoController::class,'crearProducto']);
+Route::get('/mostrarProducto',[ProductoController::class,'mostrarProductos']);
+Route::delete('/borrarProducto/{producto_id}',[ProductoController::class,'borrarProducto']);
+Route::put('/venderProducto/{producto_id}',[ProductoController::class,'venderProducto']);
